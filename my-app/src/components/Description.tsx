@@ -20,7 +20,7 @@ function Description({ description, precio, agencia }: DescriptionProps) {
         </p>
         <p>
           <span className="fw-bold">Agencia</span>={" "}
-          <samp className="text-info">{agencia}</samp>
+          <span className="text-info">{agencia}</span>
         </p>
       </div>
     </>

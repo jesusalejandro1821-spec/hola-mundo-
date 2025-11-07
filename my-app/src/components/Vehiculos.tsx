@@ -1,6 +1,6 @@
 import Imagen from "./Imagen";
 import Description from "./Description";
-
+import Countdown from "./Countdown";
 interface VehiculosProps {
   description: string;
   precio: number;
@@ -35,6 +35,7 @@ const Vehiculos = ({
           <Imagen imagen={imagen} model={model} />
         </div>
         <div className="col-12 col-md-6 col-lg-4">
+          <Countdown endDate="2025-12-31 23:59:59" />
           <Description
             description={description}
             precio={precio}

@@ -22,8 +22,8 @@ function App() {
       </div>
       <Vehiculos
         model="Sentra"
-        description="Coche 1"
-        precio={500}
+        description="Co"
+        precio={50000000}
         agencia="Lagos"
         imagen="https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2024/10/prueba-aston-martin-vanquish-4256121.jpg?tf=1920x"
       />

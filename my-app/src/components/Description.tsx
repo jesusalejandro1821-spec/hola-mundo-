@@ -27,7 +27,7 @@ function Description({
       {/* Tooltip nativo con solo title, SIN CSS */}
       <p>
         <span className="fw-bold">Descripción = </span>
-        {/*Escribe "Descripción =", en n egritas.*/}
+        {/*Escribe "Descripción =", en negritas.*/}
         <span className="text-primary" {...attrs}>
           {/*//Muestra el texto recortado en azul, y habilita el tooltip.*/}
           {truncated} {/* Inserta el texto recortado con … si era largo.*/}

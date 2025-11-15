@@ -1,4 +1,7 @@
 import "./App.css";
+import Moto from "./components/moto";
+import Patin from "./components/Patin";
+import Patineta from "./components/Patineta";
 import Vehiculos from "./components/Vehiculos";
 function App() {
   return (
@@ -20,15 +23,19 @@ function App() {
           <div className="col-1 bg-primary">12</div>
         </div>
       </div>
+
       <Vehiculos
         model="Sentra"
         description="Co"
+        likes={3}
         precio={50000000}
         agencia="Lagos"
         imagen="https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2024/10/prueba-aston-martin-vanquish-4256121.jpg?tf=1920x"
       />
+
       <Vehiculos
         model="Bocho"
+        likes={0}
         description="Coche2"
         precio={800}
         agencia="Leon"
@@ -37,5 +44,16 @@ function App() {
     </>
   );
 }
-
+function AppVieja() {
+  return (
+    <div>
+      <h1>hola</h1>
+      <Moto />
+      <div>
+        <Patin />
+      </div>
+      <Patineta />
+    </div>
+  );
+}
 export default App;

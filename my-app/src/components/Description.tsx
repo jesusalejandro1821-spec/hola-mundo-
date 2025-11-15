@@ -2,9 +2,15 @@ interface DescriptionProps {
   description: string;
   precio: number;
   agencia: string;
+  likes: number;
 }
 
-function Description({ description, precio, agencia }: DescriptionProps) {
+function Description({
+  description,
+  precio,
+  agencia,
+  likes,
+}: DescriptionProps) {
   const maxChars = 3; // máximo de caracteres permitidos
   const isLong = description.length > maxChars; // Revisa si la descripsion es mas larca que Maxchars
   const truncated = isLong //Si es larga → corta y agrega …, si no → deja igual
@@ -21,7 +27,7 @@ function Description({ description, precio, agencia }: DescriptionProps) {
       {/* Tooltip nativo con solo title, SIN CSS */}
       <p>
         <span className="fw-bold">Descripción = </span>
-        {/*Escribe "Descripción =", en negritas.*/}
+        {/*Escribe "Descripción =", en n egritas.*/}
         <span className="text-primary" {...attrs}>
           {/*//Muestra el texto recortado en azul, y habilita el tooltip.*/}
           {truncated} {/* Inserta el texto recortado con … si era largo.*/}
@@ -38,6 +44,13 @@ function Description({ description, precio, agencia }: DescriptionProps) {
           })}
         </span>
       </p>
+
+      {likes > 0 && (
+        <p>
+          <span className="fw-bold">Likes =</span>
+          <span className="text-info">{likes}</span>
+        </p>
+      )}
 
       <p>
         <span className="fw-bold">Agencia = </span>

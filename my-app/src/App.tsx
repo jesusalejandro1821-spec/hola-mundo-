@@ -6,7 +6,16 @@ import Patineta from "./components/Patineta";
 import Vehiculos from "./components/Vehiculos";
 import Carrusel from "./components/Carrusel";
 import Compras from "./components/Compras";
+import Mostrar from "./components/Mostrar";
 function App() {
+  return (
+    <div>
+      <Mostrar />
+    </div>
+  );
+}
+
+function App3() {
   const [currentOption, setOption] = useState<number | null>(null);
 
   return (

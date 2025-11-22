@@ -1,9 +1,59 @@
+import { useState } from "react";
 import "./App.css";
 import Moto from "./components/moto";
 import Patin from "./components/Patin";
 import Patineta from "./components/Patineta";
 import Vehiculos from "./components/Vehiculos";
+import Carrusel from "./components/Carrusel";
+import Compras from "./components/Compras";
 function App() {
+  const [currentOption, setOption] = useState<number | null>(null);
+
+  return (
+    <>
+      <div className="container">
+        <div className="row">
+          <div className="col-auto">
+            <button
+              onClick={() => setOption(1)}
+              type="button"
+              className="btn btn-secondary"
+            >
+              Opcion 1
+            </button>
+          </div>
+          <div className="col-auto">
+            <button
+              onClick={() => setOption(2)}
+              type="button"
+              className="btn btn-secondary"
+            >
+              Opcion 2
+            </button>
+          </div>
+          <div className="col-auto">
+            <button
+              onClick={() => setOption(null)}
+              type="button"
+              className="btn btn-secondary"
+            >
+              Opcion 3
+            </button>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
+            <h1>Seleccionaste la opcion: {currentOption}</h1>
+
+            {currentOption == 1 && <Carrusel />}
+            {currentOption == 2 && <Compras />}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+function app2() {
   return (
     <>
       <h1>Venta de Coches</h1>

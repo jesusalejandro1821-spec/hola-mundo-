@@ -1,16 +1,65 @@
 import { useState } from "react";
 import "./App.css";
-import Moto from "./components/moto";
+/*import Moto from "./components/moto";
 import Patin from "./components/Patin";
 import Patineta from "./components/Patineta";
 import Vehiculos from "./components/Vehiculos";
 import Carrusel from "./components/Carrusel";
 import Compras from "./components/Compras";
-import Mostrar from "./components/Mostrar";
+import Mostrar from "./components/Mostrar";*/
+import Colors from "./components/Colors";
+import Text from "./components/Text";
 function App() {
+  const [text, setText] = useState("");
   return (
     <div>
-      <Mostrar />
+      <input
+        placeholder="Ingresa un texto"
+        onChange={(evento) => setText(evento.target.value)}
+      />
+      <Text paragraph={text} />
+    </div>
+  );
+}
+
+function App4() {
+  const [color, setColor] = useState("text-black");
+
+  return (
+    <div>
+      <h1 className={color}>Yo voy a cambiar de color</h1>
+
+      <Colors
+        className="text-danger"
+        text="Rojo"
+        buttonColor="btn-danger"
+        changeColor={setColor}
+      />
+
+      <Colors
+        className="text-primary"
+        text="Azul"
+        buttonColor="btn-primary"
+        changeColor={setColor}
+      />
+
+      <Colors
+        className="text-success"
+        text="Verde"
+        buttonColor="btn-success"
+        changeColor={setColor}
+      />
+    </div>
+  );
+}
+/*
+function App4() {
+  return (
+    <div>
+      <h1>Yo voy a cambiar de color</h1>
+      <Colors className="text-danger" text="rojo" />
+      <Colors className="text-primary" text="Azul" />
+      <Colors className="text-success" text="verde" />
     </div>
   );
 }
@@ -114,5 +163,5 @@ function AppVieja() {
       <Patineta />
     </div>
   );
-}
+}*/
 export default App;

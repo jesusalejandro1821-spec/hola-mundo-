@@ -14,7 +14,7 @@ function App() {
   return (
     <div>
       <input
-        placeholder="TEXTO"
+        placeholder="Ingresa un texto"
         onChange={(evento) => setText(evento.target.value)}
       />
       <Text paragraph={text} />

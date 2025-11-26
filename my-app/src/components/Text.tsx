@@ -1,6 +1,7 @@
 interface TextProps {
   paragraph: string;
 }
+
 const Text = ({ paragraph }: TextProps) => {
   return (
     <div>
@@ -8,4 +9,5 @@ const Text = ({ paragraph }: TextProps) => {
     </div>
   );
 };
+
 export default Text;

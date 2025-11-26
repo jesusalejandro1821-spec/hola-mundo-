@@ -1,5 +1,5 @@
 interface ColorProps {
-  className: string; //Tonoto siempre
+  className: string;
   text: string;
   changeColor: (color: string) => void;
   buttonColor: string;
